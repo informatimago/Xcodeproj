@@ -2,7 +2,7 @@
 require File.expand_path('../lib/xcodeproj/gem_version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name     = "xcodeproj"
+  s.name     = "trustonic_xcodeproj"
   s.version  = Xcodeproj::VERSION
   s.license  = "MIT"
   s.email    = "eloy.de.enige@gmail.com"
@@ -18,10 +18,10 @@ Gem::Specification.new do |s|
 
   s.files         = %w{ README.md LICENSE } + Dir["lib/**/*.rb"]
 
-  s.executables   = %w{ xcodeproj }
+  s.executables   = %w{ }
   s.require_paths = %w{ lib }
 
-  s.add_runtime_dependency 'activesupport', '>= 3'
+  s.add_runtime_dependency 'activesupport', '> 3', '<= 4.2.6'
   s.add_runtime_dependency 'colored',       '~> 1.2'
   s.add_runtime_dependency 'claide',        '>= 1.0.0', '< 2.0'
 

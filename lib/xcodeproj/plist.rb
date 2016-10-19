@@ -14,10 +14,10 @@ module Xcodeproj
     def self.read_from_path(path)
       path = path.to_s
       unless File.exist?(path)
-        raise Informative, "The plist file at path `#{path}` doesn't exist."
+        raise Xcodeproj::Informative, "The plist file at path `#{path}` doesn't exist."
       end
       if file_in_conflict?(path)
-        raise Informative, "The file `#{path}` is in a merge conflict."
+        raise Xcodeproj::Informative, "The file `#{path}` is in a merge conflict."
       end
       implementation.read_from_path(path)
     end
